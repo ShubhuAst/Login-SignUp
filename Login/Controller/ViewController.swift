@@ -18,6 +18,14 @@ class ViewController: UIViewController {
         incorrectCredMsg.text = ""
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
